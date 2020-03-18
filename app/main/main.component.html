@@ -1,0 +1,35 @@
+<div class="container" >
+  <div class="container1">
+    <div id="canvas" >
+      <canvas (click)="addPointFromCanvas()" #canvas width="300" height="300" > </canvas>
+    </div>
+    <div id="form" >
+      <form id="formId" (ngSubmit)="x.checkValidity()&&y.checkValidity()&&r.checkValidity() && addPoint()" #f="ngForm" novalidate>
+        <div class="formdiv">
+          <label id="x_select">X: <br>
+            <input (invalid)="error('Значение X не введено или некорректно')" pattern='^-?\d([.,]\d+)?$'  #x (change)="setX(x.value)" required   id="x" name="x"   type="text"   placeholder="(-5; 3)">
+        </label>
+        </div>
+        <div class="formdiv">
+          <label id="y_select">Y: <br>
+          <input (invalid)="error('Значение Y не введено или некорректно')" pattern='^-?\d([.,]\d+)?$'  #y (change)="setY(y.value)" required   id="y" name="y"   type="text"   placeholder="(-3; 3)">
+        </label>
+        </div>
+        <div class="formdiv">
+          <label id="r_select">R:<br>
+            <input (invalid)="error('Значение R не введено или некорректно')" value="1" pattern='^\d([.,]\d+)?$'  #r (keyup)="setR(r.value); drawGraphic(point.r) " required  id="r" name="r"   type="text"   placeholder="[0; 3)">
+          </label>
+        </div>
+        <div class=" warndiv">
+          <span  *ngIf="errorMessage"> {{errorMessage}}</span>
+        </div>
+        <div class="bdiv">
+          <button name="Отправить" type="submit" align="center">
+            Отправить
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

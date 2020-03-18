@@ -1,0 +1,37 @@
+
+table{
+  width: 100%;
+}
+@media(min-width: 1099px) {
+  .container {
+    margin: 5% auto;
+    min-width: 600px;
+    width: 80%;
+    background-color: #5b80e7;
+    border: thick solid #e743ce;
+  }
+}
+@media(min-width: 877px) and (max-width: 1098px) {
+  .container{
+    margin: 5% auto;
+    max-width: 800px;
+    width: 70%;
+    min-width: 310px;
+    background-color: darkcyan;
+    border: thick solid #e743ce;
+  }
+}
+@media(max-width: 876px) {
+  .container{
+    margin: 5% auto;
+    width: 70%;
+    min-width: 310px;
+    max-width: 500px;
+    background-color: #df97ca;
+    color: darkcyan;
+    border: thick solid #5b80e7;
+  }
+}
+
+
+

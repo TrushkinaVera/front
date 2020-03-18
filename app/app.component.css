@@ -1,0 +1,44 @@
+body {
+  background-color: #5bc9f3;
+  color: white;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+}
+
+div{
+  width: 20%;
+  top: 50px;
+  position: relative;
+  height: 100px;
+  left: 40%;
+  background-color: #5b80e7;
+  border: thick solid #e743ce;
+}
+
+#time{
+  left: 0;
+  border: none;
+  width: 100%;
+  font-size: 100%;
+  top: 10%;
+  position: absolute;
+  height: 10px;
+}
+
+header
+{   color: #ff92ef;
+  background-color: rgba(38, 81, 150, 0.94);
+  padding: 12px 0;
+  font-family: FreeMo,  monospace;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+h1{
+  font-size: 150%;
+}
+
+
+

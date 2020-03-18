@@ -1,0 +1,8 @@
+<h1>Пользователь: {{getCurrentUser()}}</h1>
+<br>
+<button (click)="logOut()">Выход</button>
+<button (click)="isCheck=!isCheck">{{isCheck?'Показать табличку':'Показать график'}}</button>
+<br>
+<app-main *ngIf="isCheck"></app-main>
+<app-table *ngIf="!isCheck"></app-table>
+

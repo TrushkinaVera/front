@@ -1,0 +1,15 @@
+
+<div align="center"  class="container">
+  <h1> Авторизация </h1>
+    <form   #f="ngForm" novalidate (ngSubmit)="f.valid && login()" >
+      <div class="formdiv">
+        <label for="username" >Логин    <input #username="ngModel" required [(ngModel)]="user.username" autocomplete="false" type="text" class="form-control" id="username" name="username"/> </label>
+      </div>
+      <div class="formdiv">
+        <label for="password">Пароль  <input [(ngModel)]="user.password" required  autocomplete="false" type="password"  id="password" #password="ngModel" name="password"/></label>
+      </div>
+      <p *ngIf="errorMessage">{{errorMessage}}</p>
+      <button type="submit" [disabled]="!f.valid">Войти</button><button  [routerLink]="['/register']" type="button">Регистрация</button>
+    </form>
+
+</div>

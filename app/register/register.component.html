@@ -1,0 +1,25 @@
+<div  align="center" class="container ">
+  <h1> Регистрация </h1>
+  <form  name="form-signin"  #f="ngForm" novalidate (ngSubmit)="f.valid && password2===user.password && register()"  >
+   <div class="formdiv">
+    <label for="username">Логин
+    <input #username='ngModel' [(ngModel)]="user.username" autocomplete="false" type="text" class="form-control" id="username" name="username"  required/>
+    </label>
+   </div>
+    <div class="formdiv">
+    <label for="password">Пароль
+    <input [(ngModel)]="user.password" #password='ngModel' autocomplete="false" type="password"  id="password" name="password" required/>
+    </label>
+    </div>
+    <div class="formdiv">
+    <label for="password2"> Ещё раз
+    <input required [(ngModel)]="password2" id="password2" #pass2='ngModel' autocomplete="false" type="password"   name="password2"/>
+    </label>
+    </div>
+    <p *ngIf="f.submitted && password2!==user.password" >Пароли не совпадают</p>
+    <br>
+    <p *ngIf="errorMessage">{{errorMessage}}</p>
+  <button [disabled]="!f.valid" type="submit" >Зарегистрироваться</button>
+    <button type="button" [routerLink]="['/login']">Отменить</button>
+  </form>
+</div>
